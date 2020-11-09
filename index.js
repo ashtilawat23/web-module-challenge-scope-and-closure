@@ -29,17 +29,18 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   1. What is the difference between counter1 and counter2?
 
-      counter1 houses a function within itself to return count++
-      counter2 uses a global varible count to return the same output
+      Counter1 houses a function within itself to return count++
+      Counter2 uses a global varible count to return the same output
   
   2. Which of the two uses a closure? How can you tell?
 
-    counter1 because it has a function inside
+    Counter1 has a closure. There exists a parent level scope and a child
+    level scope in counter1. The same cannot be said about counter2. 
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
 
-     When I need to call this function whenever I need it, having it available globally
+     When I need to call this function throughout my code, having it available globally
      is important. Therefore, counter2 would be better. If I need it to do it locally, 
      I can use counter1. 
 */
